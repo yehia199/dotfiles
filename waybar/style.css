@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 27,1);
+  background-color: rgba(17, 17, 27,0);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -76,36 +76,36 @@ window#waybar.hidden {
 #custom-weather {
   padding: 0 10px;
   color: #e5e5e5;
-  border-radius: 9.5px;
-  background-color: #11111B;
+  border-radius: 20px;
+  background-color: rgba(17, 17, 27,1);
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
-  border-radius: 7.8px;
-  background-color: #11111B;
+  border-radius: 20px;
+  background-color: rgba(17, 17, 27,1);
 }
 
 #cpu {
   color: #fb958b;
-  background-color: #1f2530;
+  background-color: rgba(17, 17, 27,1);
 }
 
 #memory {
   color: #ebcb8b;
-  background-color: #1f2530;
+  background-color: rgba(17, 17, 27,0.5);
 }
 
 #custom-power-menu {
   border-radius: 9.5px;
-  background-color: #11111B;
+  background-color: rgba(17, 17, 27,0.5);
   border-radius: 7.5px;
   padding: 0 5px;
 }
 
 #custom-launcher {
-  background-color: #11111B;
+  background-color: rgba(17, 17, 27,0.5);
   color: #6a92d7;
   border-radius: 7.5px;
   padding: 0 3px;
