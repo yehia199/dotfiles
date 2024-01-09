@@ -1,11 +1,11 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 27,1);
+  background-color: rgba(17, 17, 27,0);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -36,7 +36,7 @@ window#waybar.hidden {
   background-color: transparent;
   box-shadow: inset 0 -3px transparent;
   border: none;
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 #workspaces button.focused {
@@ -76,20 +76,20 @@ window#waybar.hidden {
 #custom-weather {
   padding: 0 10px;
   color: #e5e5e5;
-  border-radius: 20px;
+  border-radius: 8px;
   margin-right: 5px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   background-color: #1E1E2E;
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
-  border-radius: 20px;
+  border-radius: 8px;
   margin-left: 10px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   background-color: #1E1E2E;
 }
 
@@ -100,7 +100,7 @@ window#waybar.hidden {
 
 #memory {
   color: #ebcb8b;
-  background-color: rgba(17, 17, 27,0.5);
+  background-color: #1E1E2E;
 }
 
 #custom-power-menu {
@@ -292,3 +292,4 @@ label:focus {
 #keyboard-state > label.locked {
   background: rgba(0, 0, 0, 0.2);
 }
+

@@ -1,15 +1,15 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 22,
+    "height": 10,
     "margin-top": 0,
-    "margin-left": 0,
+    "margin-left": 10,
     "margin-bottom": 0,
-    "margin-right": 0,
-    "spacing": 5, 
-    "modules-left": ["sway/workspaces","hyprland/workspaces"],
+    "margin-right": 10,
+    "spacing": 0, 
+    "modules-left": ["sway/workspaces", "hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["tray", "custom/notification", "backlight", "pulseaudio", "network", "battery","clock" ],
+    "modules-right": ["tray",  "backlight", "pulseaudio", "network", "battery","clock" ],
     "wlr/workspaces": {
       //"format": "{icon}",
       "on-click": "activate",
@@ -23,6 +23,9 @@
         "active": "",
         "default": ""
       }
+    },
+    "river/window": {
+        "format": "{}"
     },
     "hyprland/window": {
         "format": "{}"
@@ -61,7 +64,7 @@
         "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
         "format-disconnected": "Disconnected  ",
     },
-
+    
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "  {volume}%",
