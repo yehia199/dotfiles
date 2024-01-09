@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun,window,calc";
     icon-theme: "tela";
     show-icons: true;
     terminal: "alacritty";

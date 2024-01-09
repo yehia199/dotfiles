@@ -2,6 +2,8 @@
 exec --no-startup-id autotiling
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
+exec swaync
+exec waybar
 # Read `man 5 sway` for a complete reference.
 ### Variables
 #
@@ -18,15 +20,15 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -show drun
-gaps outer 5
+gaps outer 2
 gaps inner 2
 smart_borders on
-default_border pixel 3
+default_border pixel 2
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/b.jpg fill
+output * bg /usr/share/backgrounds/sway/awesome.png fill
 #
 # Example configuration:
 #
@@ -41,17 +43,19 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+exec = wl-paste --type text --watch cliphist store #Stores only text data
+exec = wl-paste --type image --watch cliphist store #Stores only image data
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+ exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -c 000000'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -83,8 +87,12 @@ input type:touchpad {
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+Alt+s exec grim
+    bindsym $mod+SHIFT+S exec grim -g "$(slurp -d)"
+    bindsym $mod+c exec rofi -show calc -no-show-match -no-sort 
+    bindsym $mod+Alt+e exec rofi -show emoji
     bindsym $mod+x exec wlogout
-    bindsym $mod+Shift+p hyprpicker 
+    bindsym $mod+SHIFT+P hyprpicker 
+    bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -112,7 +120,7 @@ input type:touchpad {
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+H move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
@@ -155,7 +163,7 @@ input type:touchpad {
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
     bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+SHIFT+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
@@ -214,21 +222,21 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-    status_command i3status
-    #status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-    #separator_symbol ""
-    colors {
-        statusline #ffffff
-        background #11111b
-        inactive_workspace #11111b #11111b #023266
-    }
-}
+# bar {
+#     position top
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#     status_command i3blocks
+#     status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+#     separator_symbol ""
+#     colors {
+#         statusline #ffffff
+#         background #11111b
+#         inactive_workspace #11111b #11111b #ffffff
+#     }
+# }
 
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
