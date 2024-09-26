@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 27,0);
+  background-color: #141617;
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -16,25 +16,25 @@ window#waybar {
 }
 
 #custom-launcher {
-    margin-left: 5px;
-    padding-left: 7px;
-    padding-right: 6px;
+  margin-left: 5px;
+  padding-left: 7px;
+  padding-right: 6px;
 }
 
 #custom-power-menu {
-    margin-right: 5px;
-    padding-left: 7px;
-    padding-right: 6px;
+  margin-right: 5px;
+  padding-left: 7px;
+  padding-right: 6px;
 }
+
 window#waybar.hidden {
   opacity: 0.2;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: #7984A4;
-  background-color: transparent;
-  box-shadow: inset 0 -3px transparent;
+  color: #7C6F64;
+  background-color: #1D2021;
   border: none;
   border-radius: 8px;
 }
@@ -44,11 +44,11 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: #6a92d7;
+  color: #A9B665;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: #1D2021;
 }
 
 #window {
@@ -80,7 +80,7 @@ window#waybar.hidden {
   margin-right: 5px;
   margin-top: 4px;
   margin-bottom: 4px;
-  background-color: #1E1E2E;
+  background-color: #1D2021;
 }
 
 #window,
@@ -90,12 +90,12 @@ window#waybar.hidden {
   margin-left: 10px;
   margin-top: 4px;
   margin-bottom: 4px;
-  background-color: #1E1E2E;
+  background-color: #1D2021;
 }
 
 #cpu {
   color: #fb958b;
-  background-color: rgba(17, 17, 27,1);
+  background-color: rgba(17, 17, 27, 1);
 }
 
 #memory {
@@ -105,13 +105,13 @@ window#waybar.hidden {
 
 #custom-power-menu {
   border-radius: 9.5px;
-  background-color: rgba(17, 17, 27,0.5);
+  background-color: rgba(17, 17, 27, 0.5);
   border-radius: 7.5px;
   padding: 0 5px;
 }
 
 #custom-launcher {
-  background-color: rgba(17, 17, 27,0.5);
+  background-color: rgba(17, 17, 27, 0.5);
   color: #6a92d7;
   border-radius: 7.5px;
   padding: 0 3px;
@@ -148,20 +148,20 @@ window#waybar.hidden {
   color: #dbd9d8;
 }
 
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
   margin-left: 0;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
   margin-right: 0;
 }
 
 #pulseaudio {
-  color: #7d9bba;
+  color: #E78A4E;
 }
 
 #backlight {
-   color: #8fbcbb;
+  color: #89B482;
 }
 
 #clock {
@@ -180,7 +180,7 @@ window#waybar.hidden {
 
 #battery.critical:not(.charging) {
   color: #f53c3c;
-/*  animation-name: blink;*/
+  /*  animation-name: blink;*/
 }
 
 label:focus {
@@ -229,11 +229,11 @@ label:focus {
   background-color: #eb4d4b;
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
   background-color: #eb4d4b;
 }
@@ -279,7 +279,7 @@ label:focus {
   min-width: 16px;
 }
 
-#keyboard-state > label {
+#keyboard-state>label {
   padding: 0 5px;
 }
 
@@ -289,7 +289,6 @@ label:focus {
   color: #abb2bf;
 }
 
-#keyboard-state > label.locked {
+#keyboard-state>label.locked {
   background: rgba(0, 0, 0, 0.2);
 }
-
