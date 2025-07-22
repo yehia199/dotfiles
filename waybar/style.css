@@ -1,11 +1,13 @@
+@import url('/home/yehia/.cache/wal/colors-waybar.css');
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: JetBrainsMono Nerd Font;
+  font-family: JetBrainsMono Nerd Font Propo;
   font-size: 15px;
 }
 
 window#waybar {
-  background-color: #141617;
+  background-color: #282828;
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -33,8 +35,8 @@ window#waybar.hidden {
 
 #workspaces button {
   padding: 0 5px;
-  color: #7C6F64;
-  background-color: #1D2021;
+  color: #D2BD97;
+  background-color: #282828;
   border: none;
   border-radius: 8px;
 }
@@ -44,7 +46,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: #A9B665;
+  color: #E78A4E;
 }
 
 #workspaces button.urgent {
@@ -59,6 +61,7 @@ window#waybar.hidden {
 #battery,
 #cpu,
 #memory,
+#language,
 #disk,
 #temperature,
 #backlight,
@@ -72,15 +75,16 @@ window#waybar.hidden {
 #bluetooth,
 #custom-hyprPicker,
 #custom-power-menu,
+#power-profiles-daemon,
 #custom-spotify,
 #custom-weather {
   padding: 0 10px;
-  color: #e5e5e5;
+  color: #D2BD97;
   border-radius: 8px;
   margin-right: 5px;
   margin-top: 4px;
   margin-bottom: 4px;
-  background-color: #1D2021;
+  background-color: #282828;
 }
 
 #window,
@@ -90,7 +94,7 @@ window#waybar.hidden {
   margin-left: 10px;
   margin-top: 4px;
   margin-bottom: 4px;
-  background-color: #1D2021;
+  background-color: #282828;
 }
 
 #cpu {
@@ -157,25 +161,25 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  color: #E78A4E;
+  color: #D2BD97;
 }
 
 #backlight {
-  color: #89B482;
+  color: #D2BD97;
 }
 
 #clock {
-  color: #c8d2e0;
+  color: #D2BD97;
 }
 
 #battery {
-  color: #c0caf5;
+  color: #D2BD97;
 }
 
 #battery.charging,
 #battery.full,
 #battery.plugged {
-  color: #26a65b;
+  color: #E78A4E;
 }
 
 #battery.critical:not(.charging) {
@@ -263,13 +267,13 @@ label:focus {
   color: #51a37a;
 }
 
-#language {
-  background: #00b093;
-  color: #740864;
-  padding: 0 5px;
-  margin: 0 5px;
-  min-width: 16px;
-}
+/* #language { */
+/*   background: #00b093; */
+/*   color: #740864; */
+/*   padding: 0 5px; */
+/*   margin: 0 5px; */
+/*   min-width: 16px; */
+/* } */
 
 #keyboard-state {
   background: #97e1ad;
