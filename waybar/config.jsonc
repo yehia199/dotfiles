@@ -8,7 +8,8 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "river/workspaces",
+        "sway/workspaces",
+        "niri/workspaces",
         "sway/mode",
         "sway/scratchpad",
         "custom/media"
@@ -28,6 +29,7 @@
         "backlight",
         //"keyboard-state",
         "hyprland/language",
+        "niri/language",
         "battery",
         "battery#bat2",
         "clock",
